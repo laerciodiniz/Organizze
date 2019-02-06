@@ -8,7 +8,7 @@ import com.example.laercio.organizze.R;
 import com.example.laercio.organizze.config.ConfiguracaoFirebase;
 import com.example.laercio.organizze.ui.CadastroUsuario.CadastroActivity;
 import com.example.laercio.organizze.ui.login.LoginActivity;
-import com.example.laercio.organizze.ui.login.PrincipalActivity;
+import com.example.laercio.organizze.ui.Principal.PrincipalActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
