@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.laercio.organizze.R;
 import com.example.laercio.organizze.config.ConfiguracaoFirebase;
 import com.example.laercio.organizze.model.Usuario;
+import com.example.laercio.organizze.utils.Base64Custom;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -133,8 +134,12 @@ public class CadastroActivity extends AppCompatActivity {
         ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
                 if(task.isSuccessful()){
 
+                    String idUsuario = Base64Custom.codificarBase64( usuario.getEmail() );
+                    usuario.setIdUsuario( idUsuario );
+                    usuario.salvar();
                     finish();
 
                 }else{
