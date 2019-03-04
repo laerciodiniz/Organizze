@@ -29,10 +29,8 @@ public class LoginActivity extends AppCompatActivity {
 
     @BindView(R.id.editEmail)
     TextView campoEmail;
-
     @BindView(R.id.editSenha)
     TextView campoSenha;
-
     private Usuario usuario;
     private FirebaseAuth autenticacao;
 
